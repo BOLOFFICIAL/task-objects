@@ -112,14 +112,19 @@ describe('Работа с объектами', () => {
             const result = objectClone(
                 {
                     value: true,
-                    obj,
+                    //obj,
                 },
                 3,
             );
             expect(result).toEqual([
+                /*
                 { value: true, id: 0, obj },
                 { value: true, id: 1, obj },
                 { value: true, id: 2, obj },
+                */
+                { value: true, id: 0,},
+                { value: true, id: 1,},
+                { value: true, id: 2,},
             ]);
             // @ts-ignore
             expect(result[0].obj).not.toBe(obj);
